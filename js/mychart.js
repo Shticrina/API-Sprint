@@ -1,9 +1,9 @@
 
 // ***************************** Data visualisation using chart js ********************************
 
-(function() {
+/*(async function() {
 
-  var tableRows = document.getElementsByTagName("table")[0].lastElementChild.children;
+  var tableRows = await document.getElementsByTagName("table")[0].lastElementChild.children;
   console.log(tableRows);
   // console.log(tableRows.length);
 
@@ -18,9 +18,9 @@
     // console.log(row);
   });
 
-  // console.log(labelsTable);
-  // console.log(dataset1);
-  // console.log(dataset2);
+  console.log(labelsTable);
+  console.log(dataset1);
+  console.log(dataset2);
 
   // Bar chart js to be changed
   var context = document.getElementById("mychart").getContext("2d");
@@ -55,4 +55,4 @@
   chart.data.datasets[1].data = dataset2;
   chart.update();
 
-})();
+})();*/
