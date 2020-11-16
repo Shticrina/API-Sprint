@@ -1,0 +1,62 @@
+/* Hangman game */
+
+body {
+	margin: 0;
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 18px;
+	background-color: #eee;
+	color: #720c0c;
+}
+
+a {
+	text-decoration: none;
+	color: #fff;
+}
+
+a:hover {
+	color: #eee;
+	text-decoration: none;
+}
+
+/* Style Header */
+#myheader {
+	background-color: #024c62;
+}
+
+#myheader h2 {
+	font-weight: 600;
+	font-size: 25px;
+	letter-spacing: 5px;
+}
+
+/* Style main container */
+#main {
+	height: 80vh;
+	border: 1px solid orange;
+}
+
+.content-body {
+	background-color: #fff;
+}
+
+/* Style Footer */
+#myfooter {
+	font-size: 12px;
+	background-color: #053543;
+}
+
+/***************** Responsive ******************/
+
+/*extra Small devices*/
+@media (max-width: 480px) {
+	#myheader h2 {
+		padding-left: 3rem !important;
+		padding-right: 3rem !important;
+	} 
+
+	#myheader h2 {
+		font-size: 26px;
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+}
