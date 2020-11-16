@@ -31,12 +31,22 @@ a:hover {
 
 /* Style main container */
 #main {
-	height: 80vh;
-	border: 1px solid orange;
+	/*height: 80vh;*/
 }
 
 .content-body {
 	background-color: #fff;
+}
+
+#catsTable table thead tr {
+    background-color: #ccc;
+}
+
+.cat-image {
+	width: 200px;
+	overflow: hidden;
+	position: relative;
+	height: 160px;
 }
 
 /* Style Footer */

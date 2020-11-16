@@ -22,11 +22,11 @@
 
 <body>
     <header id="myheader" class="py-3 text-center text-info">
-        <h2 class="">Welcome to Data Visualisation using API</h2>
+        <h2 class="">Data Visualisation using Cats API</h2>
     </header>
 
     <div class="container d-flex flex-column py-4" id="main">
-        <div class="content mb-5" id="content1">
+        <div class="content mb-5" id="catsChart">
             <h3>Title content 1</h3>
 
             <div class="content-body d-flex justify-content-center py-3">
@@ -34,16 +34,43 @@
             </div>
         </div>
 
-        <div class="content mb-5" id="content2">
-            <h3>Title content 2</h3>
+        <div class="content mb-5" id="catsTable">
+            <h3>Cats by breed & origin</h3>
             
-            <div class="content-body d-flex justify-content-center py-3">
-                <p>content 2</p>
+            <div class="content-body d-flex justify-content-center">
+                <table class="table table-bordered mb-0">
+                    <thead>
+                        <tr>
+                            <th>Breed name</th>
+                            <th>Image</th>
+                            <th>Origin</th>
+                            <th>Affection</th>
+                            <th>Adaptability</th>
+                            <th>Intelligence</th>
+                            <th>Details</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="tbody">
+                    </tbody>
+                </table>
+
+                <template id="template-tr">
+                    <tr>
+                        <td></td>
+                        <td class="cat-image text-center"><img src="" class="w-100"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><button type="button" class="btn btn-info btn-sm">See more</button></td>
+                    </tr>
+                </template>
             </div>
         </div>
     </div>
 
-    <footer id="myfooter" class="py-3 text-center">
+    <footer id="myfooter" class="text-center text-secondary py-3">
         <p class="mb-0">copyright &copy; 2020 &#65372; <a href="https://github.com/Shticrina" class="text-light">cristina</a></p>
         <p class="mb-0 font-italic">all rights reserved</p>
     </footer>
