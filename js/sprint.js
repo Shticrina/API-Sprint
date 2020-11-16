@@ -5,12 +5,9 @@ var myHeaders = new Headers({
 });
 
 fetch(`https://api.thecatapi.com/v1/images/search?limit=100`, { method: 'GET', headers: myHeaders })
-// fetch(`https://api.thecatapi.com/v1/breeds`, { method: 'GET', headers: myHeaders })
 	.then((response) => response.json())
 	.then((data) => {
 		// console.log(data);
-		// let cats = data.filter((cat) => cat.breeds.length > 0); // filter by breeds.length > 0
-
 		// filter by breeds.length > 0 & unique breed id key
 		let cats = data.filter(function (cat) {
 	        if (cat.breeds.length > 0) {
@@ -43,7 +40,6 @@ fetch(`https://api.thecatapi.com/v1/images/search?limit=100`, { method: 'GET', h
 		    document.getElementById("tbody").appendChild(clone);
 
 		    tdTags[6].firstElementChild.addEventListener("click", function() {
-		    	// console.log("click works: " + this.value);
 		    	setModalData(cats[index]);
 		    });
 		});
@@ -68,4 +64,3 @@ function setModalData(catObject) {
 
 	document.getElementById("modalBodyLastDiv").children[0].firstElementChild.innerHTML = catObject.breeds[0].wikipedia_url;
 }
-
