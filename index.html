@@ -58,17 +58,59 @@
                 <template id="template-tr">
                     <tr>
                         <td></td>
-                        <td class="cat-image text-center"><img src="" class="w-100"></td>
+                        <td class="cat-image text-center">
+                            <img src="" class="w-100">
+                        </td>
                         <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td><button type="button" class="btn btn-info btn-sm">See more</button></td>
+                        <td>
+                            <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal">See more</button>
+                        </td>
                     </tr>
                 </template>
             </div>
         </div>
     </div>
+
+    <!-- The Modal window for cat details -->
+    <div class="modal" id="myModal">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Breed name</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="container d-flex flex-column text-secondary">
+                        <div class="text-center font-weight-bold" id="modalBodyFirstDiv">
+                            <img src="https://cdn2.thecatapi.com/images/vH0bd0YDH.jpg" class="text-center w-25">
+                            <p class="text-left mt-4">Description: <span class="font-italic font-weight-normal">value</span></p>
+                        </div>
+
+                        <div class="row font-weight-bold" id="modalBodySecondDiv">
+                            <p class="col-6 text-left">Origin: <span class="font-italic font-weight-normal">value</span></p>
+                            <p class="col-6 text-left">Affection level: <span class="font-italic font-weight-normal">value</span></p>
+                            <p class="col-6 text-left">Adaptability: <span class="font-italic font-weight-normal">value</span></p>
+                            <p class="col-6 text-left">Energy level: <span class="font-italic font-weight-normal">value</span></p>
+                            <p class="col-6 text-left">Intelligence: <span class="font-italic font-weight-normal">value</span></p>
+                            <p class="col-6 text-left">Child friendly: <span class="font-italic font-weight-normal">value</span></p>
+                            <p class="col-6 text-left">Dog friendly: <span class="font-italic font-weight-normal">value</span></p>
+                            <p class="col-6 text-left">Temperament: <span class="font-italic font-weight-normal">value</span></p>
+                        </div>
+
+                        <div class="row ml-auto" id="modalBodyLastDiv">
+                            <p class="text-info text-14">Wikipedia url: <span class="font-italic font-weight-normal text-secondary">value</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
 
     <footer id="myfooter" class="text-center text-secondary py-3">
         <p class="mb-0">copyright &copy; 2020 &#65372; <a href="https://github.com/Shticrina" class="text-light">cristina</a></p>

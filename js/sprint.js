@@ -1,15 +1,3 @@
-var tableCats = document.getElementsByTagName("table")[0];
-// console.log(tableCatsBody);
-
-// Cat facts api
-fetch(`https://cat-fact.herokuapp.com/facts`)
-	.then((response) => response.json())
-	.then((data) => {
-		// console.log(data.all.slice(0, 20));
-		// months = months.filter((month,idx) => idx < 2)
-	})
-	.catch(error => {console.error(error)});
-
 // Cats Api
 var myHeaders = new Headers({
     'Content-Type': 'application/json',
@@ -35,12 +23,12 @@ fetch(`https://api.thecatapi.com/v1/images/search?limit=100`, { method: 'GET', h
 		    }
 		});
 
+		var tableCats = document.getElementsByTagName("table")[0];
 		var tableCatsBody = tableCats.lastElementChild;
 		var tableCatsColsNumber = tableCats.firstElementChild.firstElementChild.children.length;
 		var template = document.querySelector("#template-tr");
-
-		cats.forEach((cat, index) => {     
-			console.log(cats[index]);
+		
+		cats.forEach((cat, index) => {  
         	// use template
 		    var clone = document.importNode(template.content, true); // tr
 			var tdTags = clone.querySelectorAll("td");
@@ -53,6 +41,31 @@ fetch(`https://api.thecatapi.com/v1/images/search?limit=100`, { method: 'GET', h
             tdTags[5].innerHTML = cats[index].breeds[0].intelligence;
 
 		    document.getElementById("tbody").appendChild(clone);
+
+		    tdTags[6].firstElementChild.addEventListener("click", function() {
+		    	// console.log("click works: " + this.value);
+		    	setModalData(cats[index]);
+		    });
 		});
 	})
 	.catch(error => {console.error(error)});
+
+function setModalData(catObject) {
+	console.log(catObject);
+	document.querySelector("h4.modal-title").innerHTML = catObject.breeds[0].name;
+
+	document.getElementById("modalBodyFirstDiv").children[0].setAttribute("src", catObject.url);
+	document.getElementById("modalBodyFirstDiv").children[1].firstElementChild.innerHTML = catObject.breeds[0].description;
+
+	document.getElementById("modalBodySecondDiv").children[0].firstElementChild.innerHTML = catObject.breeds[0].origin;
+	document.getElementById("modalBodySecondDiv").children[1].firstElementChild.innerHTML = catObject.breeds[0].affection_level;
+	document.getElementById("modalBodySecondDiv").children[2].firstElementChild.innerHTML = catObject.breeds[0].adaptability;
+	document.getElementById("modalBodySecondDiv").children[3].firstElementChild.innerHTML = catObject.breeds[0].energy_level;
+	document.getElementById("modalBodySecondDiv").children[4].firstElementChild.innerHTML = catObject.breeds[0].intelligence;
+	document.getElementById("modalBodySecondDiv").children[5].firstElementChild.innerHTML = catObject.breeds[0].child_friendly;
+	document.getElementById("modalBodySecondDiv").children[6].firstElementChild.innerHTML = catObject.breeds[0].dog_friendly;
+	document.getElementById("modalBodySecondDiv").children[7].firstElementChild.innerHTML = catObject.breeds[0].temperament;
+
+	document.getElementById("modalBodyLastDiv").children[0].firstElementChild.innerHTML = catObject.breeds[0].wikipedia_url;
+}
+

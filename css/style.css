@@ -18,6 +18,10 @@ a:hover {
 	text-decoration: none;
 }
 
+.text-14 {
+	font-size: 14px;
+}
+
 /* Style Header */
 #myheader {
 	background-color: #024c62;
