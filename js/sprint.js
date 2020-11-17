@@ -115,5 +115,5 @@ function setModalData(catObject) {
 	document.getElementById("modalBodySecondDiv").children[6].firstElementChild.innerHTML = catObject.breeds[0].dog_friendly;
 	document.getElementById("modalBodySecondDiv").children[7].firstElementChild.innerHTML = catObject.breeds[0].temperament;
 
-	document.getElementById("modalBodyLastDiv").children[0].firstElementChild.innerHTML = catObject.breeds[0].wikipedia_url;
+	document.getElementById("modalBodyLastDiv").children[0].firstElementChild.setAttribute("href", catObject.breeds[0].wikipedia_url);
 }
