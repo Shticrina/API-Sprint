@@ -25,4 +25,5 @@ Given this list of [free public API](https://github.com/public-apis/public-apis)
 - Use of one js library.
 - Make it look good.
 
-***Github page:***  https://shticrina.github.io/API-Sprint/
+### See how it works
+[***go live***](https://shticrina.github.io/API-Sprint/)
